@@ -1,0 +1,427 @@
+        /* 
+            TO-DO LIST
+
+            - Make sure the biografy is responsable
+            - Make an Footer
+        */
+
+
+
+        /* 
+        COMEÇO CONFIGURAÇÕES GERAIS
+        */
+
+        :root {
+            /* General settings */
+            --general-bgr-clr: #181525;
+            --general-txt-clr: #fff;
+            --inputs-bgr-clr: rgba(0, 0, 0, 0.212);
+            --inputs-brd-clr: #01000386;
+            --hr-clr: rgba(238, 238, 238, 0.39);
+
+            /* Blocks settings */
+            --blocks-bgr-clr: #01000386;
+            --blocks-shdw-clr: black;
+
+            /* Blocks elements settings */
+            --blocks-element-bgr-clr: rgba(0, 0, 0, 0.459);
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        main {
+            display: flex;
+        }
+        body {
+            font-family: Raleway , sans-serif;
+            background-color: var(--general-bgr-clr);
+            color: var(--general-txt-clr);
+        }
+        hr {
+            margin: 1rem 0 1rem 0;
+            border: 1px solid var(--hr-clr);
+        }
+        h4 {
+            padding-bottom: .5rem;
+            margin-left: .25rem;
+        }
+        a {
+            text-decoration: none;
+            color: currentColor;
+        }
+        input[type= text] , textarea{
+            transition: box-shadow .15s ease;
+            color: var(--general-txt-clr);
+            border: none;
+        }
+        input {
+            text-align: center;
+        }
+        input:focus[type=text] , textarea:focus {
+            outline: none;
+            box-shadow: 0 0 2px rgba(255, 255, 255, 0.521);
+        }
+        .element-value {
+            max-width: 5ch;
+            padding: 1%;
+            background-color: var(--inputs-bgr-clr);
+            border-inline: 1px solid var(--inputs-brd-clr);
+        }
+
+
+        /* CONFIGURAÇÕES GERAIS FIM*/
+
+        /* COMEÇO DAS CONFIGURAÇÕES DO BLOCO */
+
+
+        .bloco {
+            background-color: var(--blocks-bgr-clr);
+            box-shadow: 1.5px 3px 5px var(--blocks-shdw-clr);
+            flex-basis: 27.5%;
+            z-index: 1;
+            border-radius: 0 0 .9rem 0;
+            padding-block: .5rem;
+        }
+        .bloco:nth-child(4) {
+            box-shadow: -1.5px 3px 5px var(--blocks-shdw-clr);
+            border-radius: 0 0 0 .9rem;
+        }
+        .left-block-container {
+            margin: .8125rem 1rem 0 1rem;
+            padding-bottom: 1rem;
+        }
+        .left-block-elements {
+            display: flex;
+            margin-top: 3px;
+            width: 100%;
+        }
+        .element-name {
+            padding: .35rem .5rem;
+            margin-right: 3px;
+            flex-basis: 100%;
+            position: relative;
+            background-color: var(--blocks-element-bgr-clr);
+        }
+        .damage-value {
+            max-width: 8rem;
+            background-color: var(--inputs-bgr-clr);
+            color: #fff;
+            border-inline: 3px solid var(--inputs-brd-clr);
+        }
+
+        /* RESERVADO PARA QUANDO FOR FAZER O SCRIPT DE APARECER O CONTAINER DE VIDA E MORTE */
+
+        /* .vida-morte {
+            justify-content: space-around;
+            background: rgb(78,46,39);
+            background: linear-gradient(297deg, rgba(78,46,39,0.5) 50%, rgba(45,83,43,0.5) 50%);
+            padding: .4125rem;
+        } */
+
+
+        /* FIM DAS CONFIGURAÇÕES DE BLOCO */
+
+        /* COMEÇO DAS CONFIGURAÇÕES DO PRIMEIRO BLOCO */
+
+
+        .chr-img {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 10px black;
+            margin-bottom: 0.75rem;
+            margin: 0.75rem auto;
+            border: 7px solid rgb(235, 235, 235);
+            outline-offset: -10px;
+        }
+        .chr-img::after {
+            content: 'Iran Ferreira';
+            background-color: rgb(204, 63, 63);
+            color: black;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 0.5rem 0;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: inset 0 0 5px black;
+            background-image: repeating-linear-gradient(15deg, transparent, #fff 0px, transparent 30px, transparent 30px, #ffffff 60px), repeating-linear-gradient(90deg, black, #ffffff 0px, transparent 30px, transparent 30px, #ffffff 60px), repeating-linear-gradient(120deg, #ffffff, #ffffff 0px, transparent 30px, transparent 30px, #ffffff 60px), repeating-linear-gradient(340deg, #ffffff, #ffffff 0px, transparent 30px, transparent 30px, #ffffff 60px);
+            background-size: 1px calc(100% + 120px), calc(100% + 120px) 1px, 1px calc(100% + 120px) , calc(100% + 120px) 1px;
+            background-position: 0 0, 0 0, 100% 0, 0 100%;
+            animation: borderAnimation 5s infinite reverse;
+        }
+        
+        @keyframes borderAnimation {
+            from { background-position: 0 0, -120px 0, 100% -120px, 0 100%; }
+            to { background-position: 0 -120px, 0 0, 100% 0, -120px 100%; }
+        }
+
+        /*
+
+        NO CASO DO PERSONAGEM TER ARMADURA TIRAR COMENTARIO
+        
+         .chr-img::before {
+            content: '0';          <- VALOR DA ARMADURA
+            text-align: center;
+            padding-top: .75rem;
+            font-weight: 600;
+            width: 3rem;
+            height: 3rem;
+            top: -10px;
+            left: -5px;
+            position: absolute;
+            background-image: url(https://static.thenounproject.com/png/1156891-200.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+            transition: width .1s ease , height .1s ease , padding-top .1s ease;
+        }
+        .chr-img:hover::before  {
+            width: 3.5rem;
+            height: 3.5rem;
+            padding-top: 1rem;
+            z-index: 1;
+        } */
+
+        .chr-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-position: 0 0;
+            transition: border .1s ease;
+            border: 2px solid rgb(139, 139, 139);
+            outline: 10px solid rgba(0, 0, 0, 0.11);
+            outline-offset: -6px;
+        }
+
+        /* FIM DAS CONFIGURAÇÕES DO PRIMEIRO BLOCO */
+
+        /* INICIO ATRIBUTOS E PERICIAS */
+
+        .atributos-pericias {
+            padding-top: 0.25rem;
+            flex-basis: 25%;
+        }
+        .pericia-element {
+            display: flex;
+            padding-block: 0.20rem;
+            background-color: rgba(0, 0, 0, 0.250);
+            border-bottom:1px solid rgba(255, 255, 255, 0.068);
+        }
+        .atributos-pericias .pericia-name , .atributo {
+            display: flex;
+            flex-direction: row;
+            padding: 2%;
+        }
+        .atribute-name {
+            height: 100%;
+            margin: auto 0;
+            cursor: pointer;
+        }
+        .pericia-name, .outros-atributos div {
+            cursor: pointer;
+        }
+        .atribute-value {
+            max-width: 2.5ch;
+            background-color: transparent;
+            font-family: Raleway , sans-serif;
+            font-size: 1.125rem;
+            border-right: 1px solid var(--general-txt-clr);
+            margin-right: 0.5rem;
+            padding-right: .25rem;
+        }
+        .a-p-first {
+            margin-right: 0.5%;
+        }
+        .forca .atributo{
+            background-color: rgba(124, 3, 3, 0.808);
+        }
+        .destreza .atributo {
+            background-color: rgba(0, 90, 0, 0.856);
+        }
+        .inteligencia .atributo {
+            background-color: rgba(21, 3, 179, 0.671);
+        }
+        .carisma .atributo {
+            background-color: #7b0086b4;
+        }
+        .flex-100 {
+            display: flex;
+            width: 100%;
+        }
+        .extra-elements {
+            background-color: rgba(133, 133, 133, 0.096);
+            opacity: 0;
+            height: 1.75rem;
+            display: none;
+            transition: opacity .3s ease, display .3s;
+        }
+        .flex-column {
+            flex-direction: column;
+        }
+        .down-btn:active .extra-elements {
+            opacity: 1;
+            display: flex;
+        }
+        .down-btn {
+            background-image: url(https://icon-library.com/images/white-down-arrow-icon/white-down-arrow-icon-9.jpg);
+            margin: auto .2rem auto auto;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: .1;
+            padding: .3rem 1rem;
+            cursor: pointer;
+        }
+        .flex-column:active .down-btn {
+            transform: rotate(180deg);
+        }
+
+        
+        /* FIM DE ATRIBUTOS E PERICIAS */
+        
+        /* INICIO DAS CONFIGURAÇÕES DO SEGUNDO BLOCO */
+        
+        .outros-atributos {
+            border-bottom:1px solid rgba(255, 255, 255, 0.041);
+            margin: auto 0;
+            line-height: 1.25rem;
+        }
+        textarea {
+            resize: none;
+            width: 100%;
+            background-color: var(--blocks-element-bgr-clr);
+            border-inline: 3px solid var(--inputs-brd-clr);
+            padding: 0.45rem;
+        }
+        
+
+        /* FIM DAS CONFIGURAÇÕES DO SEGUNDO BLOCO */
+
+        /* INICIO DAS CONFIGURAÇÕES DE BIOGRAFIA */
+
+        .biografia {
+            background-color: var(--blocks-bgr-clr);
+            padding: 1rem 1rem 2.2rem 1rem;
+            margin-top: 2.5rem;
+            box-shadow: inset 0 0 10px black;
+        }
+        .historia {
+            background-color: var(--blocks-bgr-clr);
+            flex-basis: 50%;
+            padding: 1rem;
+            color: #fff;
+        }
+        .imp-input {
+            background-color: rgb(0, 0, 0);
+            border: none;
+            color: var(--general-txt-clr);
+            width: 100%;
+            padding: .25rem .75rem;
+            border:1px solid rgba(255, 255, 255, 0.068);
+        }
+        .aparencia {
+            background-color: rgba(0, 0, 0, 0.267);
+            flex-basis: 50%;
+            padding: 1rem;
+        }
+        .importantes div:nth-child(n+1) h4{
+            padding-top: .4rem;
+        }
+        .biografia h4 {
+            font-size: 1.125rem;
+        }
+        h1 {
+            color: var(--general-txt-clr);
+            margin: 1rem 0 1.5rem 0;
+            text-align: center;
+        }
+        .aparencia *{
+            flex-basis: 50%;
+        }
+        .chr-cloth {
+            background-image: url(https://conteudo.imguol.com.br/c/esporte/bd/2022/03/23/iran-ferreira-o-luva-de-pedreiro-foi-convidado-pela-cbf-para-assistir-brasil-x-chile-no-maracana-1648081344669_v2_3x4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            border-bottom: 5px solid black;
+        }
+        .chr-cloth:before {
+            content: 'ROUPAS';
+            font-weight: 600;
+            letter-spacing: 1px;
+            top: -2rem;
+            left: 0;
+            display: block;
+            padding: 0.5rem 0 .7rem 0;
+            color: black;
+            background-color: var(--general-txt-clr);
+            text-align: center;
+            box-shadow: inset 0 0 5px black;
+        }
+        .descricao{
+            margin: 1rem 1rem 0 0;
+        }
+
+
+        /* FIM DAS CONFIGURAÇÕES DE BIOGRAFIA */
+
+        /* INICIO DE RESPONSIVIDADE */
+
+        
+    /* FOR MOBILES */
+        @media (max-width: 1000px) { 
+            main {
+                flex-direction: column;
+            }
+            textarea {
+                height: 20rem;
+            }
+            .flex-column:hover .extra-elements {
+                height: 2.5rem;
+                visibility: visible;
+                opacity: 1;
+            }
+            .chr-img {
+                height: 18rem;
+                width: 18rem;
+            }
+            .biografia .flex-100 {
+                flex-direction: column;
+            }
+            .importantes textarea{
+                max-height: 7rem;
+            }
+            .chr-cloth {
+                visibility: hidden;
+            }
+        }
+
+        /* FOR PHONES */
+        @media (max-width: 400px) {
+            .chr-img {
+                height: 14rem;
+                width: 14rem;
+            }
+            .left-block-elements.lsm{
+                flex-wrap: wrap;
+            }
+        }
+        
+        /* FOR DESKTOPS */
+        @media (min-width: 999px) {
+            .pericia-element:not(.atributo) {
+                font-size: 0.75rem;
+            }
+            .a-p-second {
+                margin-left: 0.5%;
+            }
+        }
+
+        /* FIM DE RESPONSIVIDADE */
