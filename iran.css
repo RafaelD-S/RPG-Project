@@ -257,16 +257,17 @@
         .extra-elements {
             background-color: rgba(133, 133, 133, 0.096);
             opacity: 0;
-            height: 1.75rem;
-            display: none;
-            transition: opacity .3s ease, display .3s;
+            height: 0;
+            visibility: collapse;
+            transition: height .2s ease-in, opacity .3s ease, visibility .3s;
         }
         .flex-column {
             flex-direction: column;
         }
-        .down-btn:active .extra-elements {
+        .flex-column:active .extra-elements {
+            height: 1.75rem;
             opacity: 1;
-            display: flex;
+            visibility: visible;
         }
         .down-btn {
             background-image: url(https://icon-library.com/images/white-down-arrow-icon/white-down-arrow-icon-9.jpg);
