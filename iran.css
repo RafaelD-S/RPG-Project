@@ -222,9 +222,11 @@
             height: 100%;
             margin: auto 0;
             cursor: pointer;
+            user-select: none
         }
         .pericia-name, .outros-atributos div {
             cursor: pointer;
+            user-select: none
         }
         .atribute-value {
             max-width: 2.5ch;
@@ -256,19 +258,23 @@
         }
         .extra-elements {
             background-color: rgba(133, 133, 133, 0.096);
-            opacity: 0;
+        }
+        .extra-elements-container {
             height: 0;
-            visibility: collapse;
-            transition: height .2s ease-in, opacity .3s ease, visibility .3s;
+            display: none;
+        }
+        .flex-column:active .extra-elements-container {
+            height: fit-content;
+            display: inline-block;
         }
         .flex-column {
             flex-direction: column;
         }
-        .flex-column:active .extra-elements {
+        /* .flex-column:active .extra-elements {
             height: 1.75rem;
             opacity: 1;
             visibility: visible;
-        }
+        } */
         .down-btn {
             background-image: url(https://icon-library.com/images/white-down-arrow-icon/white-down-arrow-icon-9.jpg);
             margin: auto .2rem auto auto;
@@ -278,6 +284,7 @@
             opacity: .1;
             padding: .3rem 1rem;
             cursor: pointer;
+            z-index: +2;
         }
         .flex-column:active .down-btn {
             transform: rotate(180deg);
@@ -384,10 +391,9 @@
             textarea {
                 height: 20rem;
             }
-            .flex-column:hover .extra-elements {
-                height: 2.5rem;
-                visibility: visible;
-                opacity: 1;
+            .flex-column:hover .extra-elements-container {
+                display: inline-block;
+                height: fit-content;
             }
             .chr-img {
                 height: 18rem;

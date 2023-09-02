@@ -2,16 +2,16 @@
 /*
 Js Related:
 
-- Generate a random d20 adding the value of the input of clicked perk
+X - Generate a random d20 adding the value of the input of clicked perk
 - Make changes made by users permanent for them
 - make the buttons on the special perks work properly
 - make a button to save changes made on the webpage (the button will be on footer)
+X - create something to tell if it was a failure, a normal, etc.
 
 Future plans:
 
 - Make a dice roll in front of the screen, or make a lot a numbers appear before the acctual one
 or matbe both
-- create something to tell if it was a failure, a normal, etc.
 - Make configs button to change the theme of the page (colors, font, etc.)
 
 */
@@ -30,7 +30,26 @@ function rolagem(value) {
         value = Number(value)
         
         result = Math.floor(Math.random() * 20) + 1
-        alert(result + " + " + value + " = " + (result + value))
+
+        // Adição nova para verificar se é Fracasso, Normal, Bom ou Extremo
+        function verificar(resultado) {
+                alert(`${result} + ${value} = ${result + value} - ${resultado}`)
+        }
+
+        // Adição nova para verificar se é Fracasso, Normal, Bom ou Extremo
+        // Verificar se é Normal, Bom ou Extremo
+        if(result + value < 23) {
+                verificar("Fracasso")
+        } 
+        else if(result + value >= 23 && result + value < 29) {
+                verificar("Normal")
+        } 
+        else if(result + value >= 29 && result + value < 35) {
+                verificar("Bom")
+        } 
+        else {
+                verificar("Extremo")
+        }
 }
 
 // Função de pegar os elementos que devem ser clicados
@@ -64,14 +83,32 @@ function pericia(valor) {
         nomePericia[valor].onclick = function() {
 
                 // Maluquice só pra eu achar que estou melhorando a aleatoriadade
-                resultadoFinal = []
+                jogada = []
                 for(f = 1; f <= 50; f += 1) {
                         result = Math.floor(Math.random() * 20) + 1
-                        resultadoFinal.push(result)
+                        jogada.push(result)
+                } 
+                jogada = jogada[Math.floor(Math.random() * 50)]
+                resultadoFinal = jogada + Number(valorPericia[valor].value)
+
+                // Função para facilitar a verificação
+                function verificar(resultado) {
+                        alert(`${jogada} + ${Number(valorPericia[valor].value)} = ${resultadoFinal} - ${resultado}`)
                 }
 
-                resultadoFinal = resultadoFinal[Math.floor(Math.random() * 50)]
-                alert(resultadoFinal + " + " + valorPericia[valor].value + " = " + (resultadoFinal + Number(valorPericia[valor].value)))
+                // Verificar se é Normal, Bom ou Extremo
+                if(resultadoFinal < 23) {
+                        verificar("Fracasso")
+                } 
+                else if(resultadoFinal >= 23 && resultadoFinal < 29) {
+                        verificar("Normal")
+                } 
+                else if(resultadoFinal >= 29 && resultadoFinal < 35) {
+                        verificar("Bom")
+                } 
+                else {
+                        verificar("Extremo")
+                }
         }
 }
 
