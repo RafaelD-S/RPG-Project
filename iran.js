@@ -1,5 +1,7 @@
 
 /*
+Aqui ta tudo em inglês pq na hr tava mais fácil de pensar assim
+
 Js Related:
 
 X - Generate a random d20 adding the value of the input of clicked perk
@@ -23,7 +25,7 @@ or matbe both
 let value;
 let result;
 
-// Função da rolagem de dados para atributos
+// Função da rolagem de dados para atributos 
 function rolagem(value) {
 
         value = document.getElementById(value + "-value").value
@@ -75,8 +77,8 @@ $("percepcao").onclick = function()     { rolagem("percepcao")}
 
 
 // Pegando cada valor dos inputs e o html dos elementos e transformando-os em arrays
-let valorPericia = Array.from(document.getElementsByClassName("pericia-value"))
-let nomePericia = Array.from(document.getElementsByClassName("pericia-name"))
+let valorPericia = document.querySelectorAll(".pericia-value")
+let nomePericia = document.querySelectorAll(".pericia-name")
 
 // função de rolagem de dados
 function pericia(valor) {
