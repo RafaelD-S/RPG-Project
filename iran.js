@@ -22,52 +22,52 @@ or matbe both
 
 // Atributos (Forma antiga)
 
-let value;
-let result;
+// let value;
+// let result;
 
-// Função da rolagem de dados para atributos 
-function rolagem(value) {
+// // Função da rolagem de dados para atributos 
+// function rolagem(value) {
 
-        value = document.getElementById(value + "-value").value
-        value = Number(value)
+//         value = document.getElementById(value + "-value").value
+//         value = Number(value)
         
-        result = Math.floor(Math.random() * 20) + 1
+//         result = Math.floor(Math.random() * 20) + 1
 
-        // Adição nova para verificar se é Fracasso, Normal, Bom ou Extremo
-        function verificar(resultado) {
-                alert(`${result} + ${value} = ${result + value} - ${resultado}`)
-        }
+//         // Adição nova para verificar se é Fracasso, Normal, Bom ou Extremo
+//         function verificar(resultado) {
+//                 alert(`${result} + ${value} = ${result + value} - ${resultado}`)
+//         }
 
-        // Adição nova para verificar se é Fracasso, Normal, Bom ou Extremo
-        // Verificar se é Normal, Bom ou Extremo
-        if(result + value < 23) {
-                verificar("Fracasso")
-        } 
-        else if(result + value >= 23 && result + value < 29) {
-                verificar("Normal")
-        } 
-        else if(result + value >= 29 && result + value < 35) {
-                verificar("Bom")
-        } 
-        else {
-                verificar("Extremo")
-        }
-}
+//         // Adição nova para verificar se é Fracasso, Normal, Bom ou Extremo
+//         // Verificar se é Normal, Bom ou Extremo
+//         if(result + value < 23) {
+//                 verificar("Fracasso")
+//         } 
+//         else if(result + value >= 23 && result + value < 29) {
+//                 verificar("Normal")
+//         } 
+//         else if(result + value >= 29 && result + value < 35) {
+//                 verificar("Bom")
+//         } 
+//         else {
+//                 verificar("Extremo")
+//         }
+// }
 
-// Função de pegar os elementos que devem ser clicados
-function $(id) {
-        return document.getElementById(id + "-name")
-}
+// // Função de pegar os elementos que devem ser clicados
+// function $(id) {
+//         return document.getElementById(id + "-name")
+// }
 
-// Execução das rolagens
-$("forca").onclick = function()         { rolagem("forca") }
-$("destreza").onclick = function()      { rolagem("destreza")}
-$("carisma").onclick = function()       { rolagem("carisma")}
-$("inteligencia").onclick = function()  { rolagem("inteligencia")}
-$("poder").onclick = function()         { rolagem("poder")}
-$("constituicao").onclick = function()  { rolagem("constituicao")}
-$("sorte").onclick = function()         { rolagem("sorte")}
-$("percepcao").onclick = function()     { rolagem("percepcao")}
+// // Execução das rolagens
+// $("forca").onclick = function()         { rolagem("forca") }
+// $("destreza").onclick = function()      { rolagem("destreza")}
+// $("carisma").onclick = function()       { rolagem("carisma")}
+// $("inteligencia").onclick = function()  { rolagem("inteligencia")}
+// $("poder").onclick = function()         { rolagem("poder")}
+// $("constituicao").onclick = function()  { rolagem("constituicao")}
+// $("sorte").onclick = function()         { rolagem("sorte")}
+// $("percepcao").onclick = function()     { rolagem("percepcao")}
 
 
 

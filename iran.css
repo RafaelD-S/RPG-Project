@@ -285,6 +285,7 @@
             padding: .3rem 1rem;
             cursor: pointer;
             z-index: +2;
+            user-select: none;
             transition: transform .1s ease;
         }
         
@@ -387,10 +388,6 @@
             }
             textarea {
                 height: 20rem;
-            }
-            .flex-column:hover .extra-elements-container {
-                display: inline-block;
-                height: fit-content;
             }
             .chr-img {
                 height: 18rem;
