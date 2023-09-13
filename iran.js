@@ -6,7 +6,7 @@ Js Related:
 
 X - Generate a random d20 adding the value of the input of clicked perk
 - Make changes made by users permanent for them
-- make the buttons on the special perks work properly
+X - make the buttons on the hidden perks work properly
 - make a button to save changes made on the webpage (the button will be on footer)
 X - create something to tell if it was a failure, a normal, etc.
 
@@ -95,7 +95,7 @@ function pericia(valor) {
 
                 // Função para facilitar a verificação
                 function verificar(resultado) {
-                        alert(`${jogada} + ${Number(valorPericia[valor].value)} = ${resultadoFinal} - ${resultado}`)
+                        alert(`${jogada} + ${Number(valorPericia[valor].value)} = ${resultadoFinal} | ${resultado}`)
                 }
 
                 // Verificar se é Normal, Bom ou Extremo
@@ -117,4 +117,31 @@ function pericia(valor) {
 // loop para repetir o comando em todos as pericias
 for(n = 0; n < valorPericia.length; n += 1) {
         pericia(n)
+}
+
+// Abrir gaveta de pericias
+
+let botaoGaveta = document.querySelectorAll(".down-btn")
+let gaveta = document.querySelectorAll(".extra-elements-container")
+
+function abrirGaveta(valor) {
+        let modal = true
+        botaoGaveta[valor].onclick = function() {
+                if(modal === true) {
+                        gaveta[valor].style.display = "inline-block"
+                        gaveta[valor].style.height = "fit-content"
+                        modal = false
+                        botaoGaveta[valor].style.transform = "rotate(180deg)"
+                } 
+                else if(modal === false) {
+                        gaveta[valor].style.display = "none"
+                        gaveta[valor].style.height = 0
+                        modal = true
+                        botaoGaveta[valor].style.transform = "rotate(0deg)"
+                }
+        }
+}
+
+for(n = 0; n < botaoGaveta.length; n += 1) {
+        abrirGaveta(n)
 }

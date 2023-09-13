@@ -1,7 +1,7 @@
         /* 
             TO-DO LIST
 
-            - Make sure the biografy is responsable
+            X - Make sure the biografy is responsable
             - Make an Footer
         */
 
@@ -263,10 +263,10 @@
             height: 0;
             display: none;
         }
-        .flex-column:active .extra-elements-container {
+        /* .flex-column:active .extra-elements-container {
             height: fit-content;
             display: inline-block;
-        }
+        } */
         .flex-column {
             flex-direction: column;
         }
@@ -285,11 +285,8 @@
             padding: .3rem 1rem;
             cursor: pointer;
             z-index: +2;
+            transition: transform .1s ease;
         }
-        .flex-column:active .down-btn {
-            transform: rotate(180deg);
-        }
-
         
         /* FIM DE ATRIBUTOS E PERICIAS */
         
