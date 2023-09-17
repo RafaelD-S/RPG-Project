@@ -71,7 +71,7 @@
         .bloco {
             background-color: var(--blocks-bgr-clr);
             box-shadow: 1.5px 3px 5px var(--blocks-shdw-clr);
-            flex-basis: 27.5%;
+            flex-basis: 25%;
             z-index: 1;
             border-radius: 0 0 .9rem 0;
             padding-block: .5rem;
@@ -81,8 +81,7 @@
             border-radius: 0 0 0 .9rem;
         }
         .left-block-container {
-            margin: .8125rem 1rem 0 1rem;
-            padding-bottom: 1rem;
+            padding: 1rem;
         }
         .left-block-elements {
             display: flex;
@@ -125,10 +124,8 @@
             border-radius: 50%;
             position: relative;
             box-shadow: 0 0 10px black;
-            margin-bottom: 0.75rem;
-            margin: 0.75rem auto;
+            margin: 0 auto 1rem auto;
             border: 7px solid rgb(235, 235, 235);
-            outline-offset: -10px;
         }
         .chr-img::after {
             content: 'Iran Ferreira';
@@ -152,6 +149,9 @@
         @keyframes borderAnimation {
             from { background-position: 0 0, -120px 0, 100% -120px, 0 100%; }
             to { background-position: 0 -120px, 0 0, 100% 0, -120px 100%; }
+        }
+        .damage-name {
+            cursor: pointer;
         }
 
         /*

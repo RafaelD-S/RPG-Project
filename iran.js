@@ -7,16 +7,16 @@ Js Related:
 X - Generate a random d20 adding the value of the input of clicked perk
 X - make the buttons on the hidden perks work properly
 X - create something to tell if it was a failure, a normal, etc.
-- Make a dice roll in front of the screen, or make a lot a numbers appear before the acctual one
-or matbe both
 - Make configs button to change the theme of the page (colors, font, etc.)
-- Adcionar os atributos a nova forma de jogar dados
-- Pontos de vida e morte
-  > Mudar o nome da classe para algo diferente de pericia-name & pericia-value
-  > Adcionar essa classe a todos os atributos e confirmar que funcionem corretamente
-  
+X - Adcionar os atributos a nova forma de jogar dados
+X - Pontos de vida e morte
+X - Sistema de danos / Jogar dados
+- Botão de vantagem e desvangem
+
 Future plans:
 
+- Make a dice roll in front of the screen, or make a lot a numbers appear before the acctual one
+or matbe both
 - Make changes made by users permanent for them
 - make a button to save changes made on the webpage (the button will be on footer)
 
@@ -26,9 +26,9 @@ Future plans:
 CSS & HTML Related:
 
 - Make a footer
-
-
 */
+
+
 
 // Pericias & Atributos
 
@@ -115,4 +115,58 @@ function morrendo() {
         else {
                 vidaMorte.style.display = "none"
         }
+}
+
+// Sistema de Danos (Ainda falta adcionar algo que verifique mais de 1 tipo de dado)
+
+let danos = document.querySelectorAll(".damage-value")
+let botaoDanos = document.querySelectorAll(".damage-name")
+
+function rolarDano(valor) {
+        botaoDanos[valor].onclick = function() {
+                let cadaDanos = danos[valor].value
+                let diceAmount = cadaDanos.slice(0, cadaDanos.indexOf("d"))
+                
+                
+                if(cadaDanos.indexOf('+') > -1) {
+
+                        let diceSides = cadaDanos.slice(cadaDanos.indexOf("d") + 1, cadaDanos.indexOf("+"))
+                        let diceExtra = Number(cadaDanos.slice(cadaDanos.indexOf("+") + 1))
+                        let jogada = []
+                        let somaJogada = 0
+
+                        for(n = 0; n < Number(diceAmount); n += 1) {
+                                jogadaArray = (Math.floor(Math.random() * diceSides) + 1 + diceExtra)
+                                jogada.push(jogadaArray)
+                                somaJogada += jogadaArray
+                        }
+
+                        if(diceAmount > 1) {
+                                alert(jogada.join(" + ") + " = " + somaJogada)
+                        } else {
+                                alert(somaJogada)
+                        }
+                }
+                else {
+                        let diceSides = cadaDanos.slice(cadaDanos.indexOf("d") + 1)
+                        let jogada = []
+                        let somaJogada = 0
+
+                        for(n = 0; n < Number(diceAmount); n += 1) {
+                                jogadaArray = (Math.floor(Math.random() * diceSides) + 1)
+                                jogada.push(jogadaArray)
+                                somaJogada += jogadaArray
+                        }
+
+                        if(diceAmount > 1) {
+                                alert(jogada.join(" + ") + " = " + somaJogada)
+                        } else {
+                                alert(somaJogada)
+                        }
+                }       
+        }
+}
+
+for(n = 0; n < botaoDanos.length; n += 1) {
+        rolarDano(n)
 }
