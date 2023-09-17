@@ -1,11 +1,3 @@
-        /* 
-            TO-DO LIST
-
-            X - Make sure the biografy is responsable
-            - Make an Footer
-        */
-
-
 
         /* 
         COMEÇO CONFIGURAÇÕES GERAIS
@@ -20,11 +12,11 @@
             --hr-clr: rgba(238, 238, 238, 0.39);
 
             /* Blocks settings */
-            --blocks-bgr-clr: #01000386;
+            --blocks-bgr-clr: #0000007a;
             --blocks-shdw-clr: black;
 
             /* Blocks elements settings */
-            --blocks-element-bgr-clr: rgba(0, 0, 0, 0.459);
+            --blocks-element-bgr-clr: rgba(0, 0, 0, 0.45);
         }
         * {
             padding: 0;
@@ -110,15 +102,16 @@
             color: #fff;
             border-inline: 3px solid var(--inputs-brd-clr);
         }
-
-        /* RESERVADO PARA QUANDO FOR FAZER O SCRIPT DE APARECER O CONTAINER DE VIDA E MORTE */
-
-        /* .vida-morte {
+        .vida-morte {
+            display: none;
             justify-content: space-around;
             background: rgb(78,46,39);
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: inset 0 0 5px black;
+            border-top: none;
             background: linear-gradient(297deg, rgba(78,46,39,0.5) 50%, rgba(45,83,43,0.5) 50%);
             padding: .4125rem;
-        } */
+        }
 
 
         /* FIM DAS CONFIGURAÇÕES DE BLOCO */
@@ -263,30 +256,20 @@
             height: 0;
             display: none;
         }
-        /* .flex-column:active .extra-elements-container {
-            height: fit-content;
-            display: inline-block;
-        } */
         .flex-column {
             flex-direction: column;
         }
-        /* .flex-column:active .extra-elements {
-            height: 1.75rem;
-            opacity: 1;
-            visibility: visible;
-        } */
         .down-btn {
             background-image: url(https://icon-library.com/images/white-down-arrow-icon/white-down-arrow-icon-9.jpg);
             margin: auto .2rem auto auto;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            opacity: .1;
+            opacity: .2;
             padding: .3rem 1rem;
             cursor: pointer;
             z-index: +2;
             user-select: none;
-            transition: transform .1s ease;
         }
         
         /* FIM DE ATRIBUTOS E PERICIAS */

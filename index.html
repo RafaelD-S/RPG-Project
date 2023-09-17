@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="iran.css">
     <link rel="stylesheet" href="">
     <title>Iran Ferreira</title>
-    <style>
-
-    </style>
 </head>
 <body>
     <main>
@@ -26,7 +23,7 @@
             <div class="block-text-area">
                 <div class="left-block-elements lsm" >
                     <div class="teste flex-100">
-                        <input type="text" name="" id="vida" class="element-value" value="15" placeholder="18">
+                        <input type="text" name="" id="vida" class="element-value" value="15" placeholder="18" onchange="morrendo()">
                         <div class="element-name" id="vida-name">Vida</div>
                     </div>
                     <div class="teste flex-100">
@@ -38,16 +35,14 @@
                         <div class="element-name">Mana</div>
                     </div>
                 </div>
-            <!-- RESERVADO PARA QUANDO FOR FAZER O SCRIPT DE ABRIR O CONTAINER DE VIDA E MORTE
-
-                <div class="flex-100 vida-morte">
-                    <input type="radio">
-                    <input type="radio">
-                    <input type="radio">
-                    <input type="radio">
-                    <input type="radio">
-                    <input type="radio">
-                </div> -->
+                <div class="vida-morte">
+                    <input type="radio" name="" id="">
+                    <input type="radio" name="" id="">
+                    <input type="radio" name="" id="">
+                    <input type="radio" name="" id="">
+                    <input type="radio" name="" id="">
+                    <input type="radio" name="" id="">
+                </div>
             </div>
             <hr>
             <h4>DANOS</h4>
@@ -56,13 +51,15 @@
                     <div class="element-name">Soco</div>
                     <input type="text" name="" id="" class="damage-value" value="1d4">
                 </div>
+                <div class="left-block-elements">
+                    <div class="element-name">Marreta</div>
+                    <input type="text" name="" id="" class="damage-value" value="1d8">
+                </div>
                 <hr>
                 <h4>INFOS</h4>
                 <div class="block-text-area">
                     <div class="left-block-elements">
-                        <div class="element-name morte">Ajudante de Pedreiro</div>
-                    </div>
-                    <div class="left-block-elements">
+                        <div class="element-name morte">Ajud. de Pedreiro</div>
                         <div class="element-name morte">19 Anos</div>
                     </div>
                     <div class="left-block-elements">
@@ -88,161 +85,161 @@
         
         <div class="forca">
             <div class="atributo">
-                <input type="text" class="atribute-value" placeholder="0&nbsp;" value="13" id="forca-value">
-                <div class="atribute-name" id="forca-name">FORÇA</div>
+                <input type="text" class="atribute-value rolagem-value" placeholder="0&nbsp;" value="13" id="forca-value">
+                <div class="atribute-name rolagem-name" id="forca-name">FORÇA</div>
             </div>
             <div class="pericia-element flex-column">
                 <div class="flex-100">
-                    <input type="text" value="14" class="element-value pericia-value">
-                    <div class="pericia-name">LUTAR / BRIGA</div>
+                    <input type="text" value="14" class="element-value pericia-value rolagem-value">
+                    <div class="pericia-name rolagem-name">LUTAR / BRIGA</div>
                     <div class="down-btn">
                         
                     </div>
                 </div>
                 <div class="extra-elements-container">
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="13" class="element-value pericia-value">
-                        <div class="pericia-name">BASTÕES</div>
+                        <input type="text" value="13" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">BASTÕES</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="15" class="element-value pericia-value">
-                        <div class="pericia-name">MARTELOS</div>
+                        <input type="text" value="15" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">MARTELOS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">LANÇAS</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">LANÇAS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">MACHADOS</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">MACHADOS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">ESPADAS</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">ESPADAS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">FACAS</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">FACAS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">FOICES</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">FOICES</div>
                     </div>
                 </div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="12" class="element-value pericia-value">
-                <div class="pericia-name">ATLETISMO</div>
+                <input type="text" value="12" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">ATLETISMO</div>
             </div>
         </div>
         <div class="destreza">
             <div class="atributo">
-                <input type="text" class="atribute-value" placeholder="0&nbsp;" value="11" id="destreza-value">
-                <div class="atribute-name" id="destreza-name">DESTREZA</div>
+                <input type="text" class="atribute-value rolagem-value" placeholder="0&nbsp;" value="11" id="destreza-value">
+                <div class="atribute-name rolagem-name" id="destreza-name">DESTREZA</div>
             </div>
             <div class="pericia-element flex-column">
                 <div class="flex-100">
-                    <input type="text" value="5" class="element-value pericia-value">
-                    <div class="pericia-name">ATIRAR</div>
+                    <input type="text" value="5" class="element-value pericia-value rolagem-value">
+                    <div class="pericia-name rolagem-name">ATIRAR</div>
                     <div class="down-btn">
                         
                     </div>                
                 </div>
                 <div class="extra-elements-container">
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="10" class="element-value pericia-value">
-                        <div class="pericia-name">PISTOLAS</div>
+                        <input type="text" value="10" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">PISTOLAS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">SHOTGUNS</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">SHOTGUNS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">METRALHADORAS</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">METRALHADORAS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">ARCO E FLECHAS</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">ARCO E FLECHAS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">SNIPER</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">SNIPER</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">BESTA / BALESTRA</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">BESTA / BALESTRA</div>
                     </div>
                 </div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="12" class="element-value pericia-value">
-                <div class="pericia-name">SALTAR / PULAR</div>
+                <input type="text" value="12" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">SALTAR / PULAR</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="13" class="element-value pericia-value">
-                <div class="pericia-name">ARREMESAR</div>
+                <input type="text" value="13" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">ARREMESAR</div>
             </div>
             <div class="pericia-element flex-column">
                 <div class="flex-100">
-                    <input type="text" value="8" class="element-value pericia-value">
-                    <div class="pericia-name">FURTIVIDADE</div>
+                    <input type="text" value="8" class="element-value pericia-value rolagem-value">
+                    <div class="pericia-name rolagem-name">FURTIVIDADE</div>
                     <div class="down-btn">
                         
                     </div>               
                 </div>
                 <div class="extra-elements-container">
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">FURTAR</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">FURTAR</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="5" class="element-value pericia-value">
-                        <div class="pericia-name">ARROMBAR FECHADURAS</div>
+                        <input type="text" value="5" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">ARROMBAR FECHADURAS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="11" class="element-value pericia-value">
-                        <div class="pericia-name">ESCONDER-SE</div>
+                        <input type="text" value="11" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">ESCONDER-SE</div>
                     </div>
                 </div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">DIRIGIR</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">DIRIGIR</div>
             </div>
         </div>
         <div class="carisma">
             <div class="atributo">
-                <input type="text" class="atribute-value" placeholder="0&nbsp;" value="4" id="carisma-value">
-                <div class="atribute-name" id="carisma-name">CARISMA</div>
+                <input type="text" class="atribute-value rolagem-value" placeholder="0&nbsp;" value="4" id="carisma-value">
+                <div class="atribute-name rolagem-name" id="carisma-name">CARISMA</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">LÁBIA</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">LÁBIA</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">NEGOCIAR</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">NEGOCIAR</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="13" class="element-value pericia-value">
-                <div class="pericia-name">INTIMIDAR</div>
+                <input type="text" value="13" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">INTIMIDAR</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">APARÊNCIA</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">APARÊNCIA</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">DETECTAR MENTIRAS</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">DETECTAR MENTIRAS</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">CHARME</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">CHARME</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="11" class="element-value pericia-value">
-                <div class="pericia-name">ADESTRAR ANIMAIS</div>
+                <input type="text" value="11" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">ADESTRAR ANIMAIS</div>
             </div>
         </div>
     </div>
@@ -255,129 +252,129 @@
     <div class="atributos-pericias a-p-second">
         <div class="inteligencia">
             <div class="atributo">
-                <input type="text" class="atribute-value" placeholder="0&nbsp;" value="5" id="inteligencia-value">
-                <div class="atribute-name" id="inteligencia-name">INTELIGÊNCIA</div>
+                <input type="text" class="atribute-value rolagem-value" placeholder="0&nbsp;" value="5" id="inteligencia-value">
+                <div class="atribute-name rolagem-name" id="inteligencia-name">INTELIGÊNCIA</div>
             </div>
             <div class="pericia-element flex-column">
                 <div class="flex-100">
-                    <input type="text" value="0" class="element-value pericia-value">
-                    <div class="pericia-name">ENGENHARIA</div>
+                    <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                    <div class="pericia-name rolagem-name">ENGENHARIA</div>
                     <div class="down-btn">
                         
                     </div>                
                 </div>
                 <div class="extra-elements-container">
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">ENGENHARIA DE AUTOMÓVEIS</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">ENGENHARIA DE AUTOMÓVEIS</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">ENGENHARIA EXPLOSIVA</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">ENGENHARIA EXPLOSIVA</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">ENGENHARIA DA COMPUTAÇÃO</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">ENGENHARIA DA COMPUTAÇÃO</div>
                     </div>
                 </div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">MEDICINA</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">MEDICINA</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">PRIMEIROS SOCORROS</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">PRIMEIROS SOCORROS</div>
             </div>
             <div class="pericia-element flex-column">
                 <div class="flex-100">
-                    <input type="text" value="12" class="element-value pericia-value">
-                    <div class="pericia-name">TOCAR INSTRUMENTOS</div>
+                    <input type="text" value="12" class="element-value pericia-value rolagem-value">
+                    <div class="pericia-name rolagem-name">TOCAR INSTRUMENTOS</div>
                     <div class="down-btn">
                         
                     </div>                
                 </div>
                 <div class="extra-elements-container">
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">PIANO</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">PIANO</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="15" class="element-value pericia-value">
-                        <div class="pericia-name">VIOLÃO</div>
+                        <input type="text" value="15" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">VIOLÃO</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="9" class="element-value pericia-value">
-                        <div class="pericia-name">GUITARRA</div>
+                        <input type="text" value="9" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">GUITARRA</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">VIOLINO</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">VIOLINO</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">BATERIA</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">BATERIA</div>
                     </div>
                 </div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">PSICOLOGIA</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">PSICOLOGIA</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">ANÁLISE TEXTUAL</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">ANÁLISE TEXTUAL</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">HISTÓRIA</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">HISTÓRIA</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">LINGUAGEM</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">LINGUAGEM</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">BIOLOGIA</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">BIOLOGIA</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">BALÍSTICA</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">BALÍSTICA</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="10" class="element-value pericia-value">
-                <div class="pericia-name">USAR COMPUTADORES</div>
+                <input type="text" value="10" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">USAR COMPUTADORES</div>
             </div>
             <div class="pericia-element flex-column">
                 <div class="flex-100">
-                    <input type="text" value="0" class="element-value pericia-value">
-                    <div class="pericia-name">CIENCIA FORENSE</div>
+                    <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                    <div class="pericia-name rolagem-name">CIENCIA FORENSE</div>
                     <div class="down-btn">
                         
                     </div>               
                 </div>
                 <div class="extra-elements-container">
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">CRIMINALISTICA</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">CRIMINALISTICA</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">TOXICOLOGIA FORENSE</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">TOXICOLOGIA FORENSE</div>
                     </div>
                     <div class="flex-100 extra-elements">
-                        <input type="text" value="0" class="element-value pericia-value">
-                        <div class="pericia-name">ANTROPOLOGIA FORENSE</div>
+                        <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                        <div class="pericia-name rolagem-name">ANTROPOLOGIA FORENSE</div>
                     </div>
                 </div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="0" class="element-value pericia-value">
-                <div class="pericia-name">DESENHO</div>
+                <input type="text" value="0" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">DESENHO</div>
             </div>
             <div class="pericia-element">
-                <input type="text" value="9" class="element-value pericia-value">
-                <div class="pericia-name">FOTOGRAFIA</div>
+                <input type="text" value="9" class="element-value pericia-value rolagem-value">
+                <div class="pericia-name rolagem-name">FOTOGRAFIA</div>
             </div>
         </div>
     </div>
@@ -393,20 +390,20 @@
             <div class="block-text-area">
                 <h4>OUTROS ATRIBUTOS</h4>
                 <div class="atributo outros-atributos">
-                    <input type="text" class="atribute-value" placeholder="0&nbsp;" value="10" id="poder-value">
-                    <div id="poder-name">PODER</div>
+                    <input type="text" class="atribute-value rolagem-value" placeholder="0&nbsp;" value="10" id="poder-value">
+                    <div id="poder-name" class="rolagem-name">PODER</div>
                 </div>
                 <div class="atributo outros-atributos">
-                    <input type="text" class="atribute-value" placeholder="0&nbsp;" value="15" id="constituicao-value">
-                    <div id="constituicao-name">CONSTITUIÇÃO</div>
+                    <input type="text" class="atribute-value rolagem-value" placeholder="0&nbsp;" value="15" id="constituicao-value">
+                    <div id="constituicao-name" class="rolagem-name">CONSTITUIÇÃO</div>
                 </div>
                 <div class="atributo outros-atributos">
-                    <input type="text" class="atribute-value" placeholder="0&nbsp;" value="6" id="sorte-value">
-                    <div id="sorte-name">SORTE</div>
+                    <input type="text" class="atribute-value rolagem-value" placeholder="0&nbsp;" value="6" id="sorte-value">
+                    <div id="sorte-name" class="rolagem-name">SORTE</div>
                 </div>
                 <div class="atributo outros-atributos">
-                    <input type="text" class="atribute-value" placeholder="0&nbsp;" value="11" id="percepcao-value">
-                    <div id="percepcao-name">PERCEPÇÃO</div>
+                    <input type="text" class="atribute-value rolagem-value" placeholder="0&nbsp;" value="11" id="percepcao-value">
+                    <div id="percepcao-name" class="rolagem-name">PERCEPÇÃO</div>
                 </div>
                 <hr>
                 <h4>MOCHILA</h4>
